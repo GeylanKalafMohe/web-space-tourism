@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Space tourism website</title>
+    <%- include('./includes/shared/head') %>
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/crew.css">
+    <script src="/scripts/space-data.js"></script>
+    <script src="/scripts/pagination-handler.js"></script>
+    <script src="/scripts/crew.js" defer></script>
+  </head>
+  <body>
+    <div id="bg-image">
+      <%- include("./includes/shared/header", { selectedTabIndex: 2 }) %>
+
+      <main>
+        <%- include('./includes/shared/page-step', { 
+          title: 'Meet your crew', count: "02"
+        }) %>
+        <div class="main-content">
+          <div class="item-details-container">
+            <div class="item-details">
+              <h2>ROLE</h2>
+              <h3>CREW NAME</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptate consequuntur non eaque! Saepe, quae repellendus ducimus quos vitae reiciendis aperiam labore fugit, a facilis tempora distinctio totam impedit soluta.</p>
+            </div>
+            <ol>
+              <li class="selected"></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+          <div class="item-image-container">
+            <img class="item-image" src="/assets/crew/image-douglas-hurley.webp" alt="Image of crew member">
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Space tourism website</title>
+    <%- include('./includes/shared/head') %>
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/destination.css">
+    <script src="/scripts/space-data.js"></script>
+    <script src="/scripts/pagination-handler.js"></script>
+    <script src="/scripts/destination.js" defer></script>
+  </head>
+  <body>
+    <div id="bg-image">
+      <%- include("./includes/shared/header", { selectedTabIndex: 1 }) %>
+
+      <main>
+        <%- include('./includes/shared/page-step', { 
+          title: 'PICK YOUR DESTINATION', count: "01"
+        }) %>
+        <div class="main-content">
+          <img class="item-image" src="/assets/destination/image-moon.webp" alt="Image of destination object">
+          <div id="picked-destination-container">
+            <div class="picked-destination">
+              <ul class="nav-list">
+                <li><button class="selected">Moon</button></li>
+                <li><button>Mars</button></li>
+                <li><button>Europa</button></li>
+                <li><button>Titan</button></li>
+              </ul>
+              <div class="destination-explanation">
+                <h2>MOON</h2>
+                <p id="main-description">
+                  See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+                  regain perspective and come back refreshed. While you’re there, take in some history
+                  by visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+              <hr>
+              <div class="destination-details-container">
+                <div class="destination-details">
+                  <p class="detail-title">Avg. distance</p>
+                  <p class="detail-value" id="avg-distance">384,400 km</p>
+                </div>
+                <div class="destination-details">
+                  <p class="detail-title">Est. travel time</p>
+                  <p class="detail-value" id="travel-time">3 days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

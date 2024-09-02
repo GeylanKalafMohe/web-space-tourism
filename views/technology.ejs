@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Space tourism website</title>
+    <%- include('./includes/shared/head') %>
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/technology.css">
+    <script src="/scripts/space-data.js"></script>
+    <script src="/scripts/pagination-handler.js"></script>
+    <script src="/scripts/technology.js" defer></script>
+  </head>
+  <body>
+    <div id="bg-image">
+      <%- include("./includes/shared/header", { selectedTabIndex: 3 }) %>
+
+      <main>
+        <%- include('./includes/shared/page-step', { 
+          title: 'SPACE LAUNCH 101', count: "03"
+        }) %>
+        <div class="main-content">
+          <div class="item-details-container">
+            <ol>
+              <li class="selected">1</li>
+              <li>2</li>
+              <li>3</li>
+            </ol>
+            <div class="item-details">
+              <h2>THE TERMINOLOGY…</h2>
+              <h3>NAME</h3>
+              <p>Loading data...</p>
+            </div>
+          </div>
+          <div class="item-image-container">
+            <img class="item-image" src="" alt="Image of space launch technology item">
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

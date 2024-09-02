@@ -1,0 +1,81 @@
+:root {
+  --font-family-bellefair: "Bellefair";
+  --font-family-barlow-condensed: "Barlow Condensed";
+  --font-family-barlow: "Barlow";
+  font-family: var(--font-family-bellefair);
+
+  --color-blue-900: hsl(230, 35%, 7%);
+  --color-blue-300: hsl(231, 77%, 90%);
+
+  --color-white: hsl(0, 0%, 100%);
+
+  --text-preset-1: 400 9rem/1.719 var(--font-family-bellefair);
+  --text-preset-1-mobile: 400 5rem/1.719 var(--font-family-bellefair);
+  --text-preset-2: 400 6.25rem/1.146 var(--font-family-bellefair);
+  --text-preset-2-mobile: 400 3.5rem/1 var(--font-family-bellefair);
+  --text-preset-3: 400 3.5rem var(--font-family-bellefair);
+  --text-preset-3-mobile: 400 1.5rem var(--font-family-bellefair);
+  --text-preset-4: 400 2rem/0.367 var(--font-family-bellefair);
+  --text-preset-4-mobile: 400 1.25rem/0.367 var(--font-family-bellefair);
+  --text-preset-5: 400 1.75rem/0.336 var(--font-family-barlow-condensed);
+  --text-preset-5-letter-spacing: 4px;
+
+  --text-preset-6: 400 1.75rem/0.321 var(--font-family-bellefair);
+  --text-preset-6-mobile: 400 1rem/0.321 var(--font-family-barlow-condensed);
+  --text-preset-7: 400 0.875rem/0.192 var(--font-family-barlow-condensed);
+  --text-preset-7-letter-spacing: 2px;
+
+  --text-preset-8: 400 1rem var(--font-family-barlow);
+  --text-preset-8-letter-spacing: 2px;
+
+  --text-preset-9: 400 1.125rem/1.8 var(--font-family-barlow);
+  --text-preset-9-mobile: 400 0.9375rem/1.8 var(--font-family-barlow);
+
+  --spacing-1600: 8rem;
+  --spacing-1200: 6rem;
+  --spacing-1000: 5rem;
+  --spacing-800: 4rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
+  --spacing-25: 0.125rem;
+}
+
+body {
+  margin: 0;
+}
+
+.divider {
+  border-color: #979797;
+  border-width: 1px;
+}
+
+#bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  background-position: center;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  transition: background-image 0.2s;
+}
+
+#main-description {
+  font: var(--text-preset-9);
+  margin: 0;
+  color: var(--color-blue-300);
+  transition: font 0.2s;
+}
+
+@media (max-width: 30rem) {
+  #main-description {
+    font: var(--text-preset-9-mobile);
+  }
+}

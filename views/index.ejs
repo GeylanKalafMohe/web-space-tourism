@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Space tourism website</title>
+    <%- include('./includes/shared/head.ejs') %>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body>
+    <div id="bg-image">
+      <%- include("./includes/shared/header", { selectedTabIndex: 0 }) %>
+
+      <main>
+        <div id="page-title-container">
+          <h1>
+            <span>So, you want to travel to</span>
+            <strong>Space</strong>
+          </h1>
+
+          <p id="main-description">
+            Let’s face it; if you want to go to space, you might as well genuinely go to
+            outer space and not hover kind of on the edge of it. Well sit back, and relax
+            because we’ll give you a truly out of this world experience!
+          </p>
+        </div>
+
+        <a id="explore-btn" href="/destination">Explore</a>
+      </main>
+    </div>
+  </body>
+</html>

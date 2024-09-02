@@ -1,0 +1,93 @@
+body {
+  height: 100%;
+}
+
+#bg-image {
+  background-image: url("/assets/home-page/background-home-desktop.jpg");
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 11rem;
+  padding: 20vh 0;
+}
+
+#page-title-container {
+  max-width: 33.75rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 span {
+  font: var(--text-preset-5);
+  letter-spacing: var(--text-preset-5-letter-spacing);
+  color: var(--color-blue-300);
+  transition: font 0.2s;
+}
+
+h1 strong {
+  font: var(--text-preset-1);
+  transition: font 0.2s;
+}
+
+#explore-btn {
+  width: 17rem;
+  height: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: var(--spacing-800);
+  font: var(--text-preset-4);
+  text-transform: uppercase;
+  color: var(--color-blue-900);
+  background-color: var(--color-white);
+  border: none;
+  outline: 88px solid transparent;
+  transition: width 0.2s, height 0.2s, font 0.2s, outline-color 0.2s;
+  cursor: pointer;
+}
+
+#explore-btn:hover {
+  outline-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 30rem) {
+  main {
+    margin: 0 var(--spacing-300);
+    padding: 0;
+    gap: 7.5rem;
+  }
+
+  #bg-image {
+    background-image: url("/assets/home-page/background-home-mobile.jpg");
+  }
+
+  h1 span {
+    font: var(--text-preset-6-mobile);
+  }
+
+  h1 strong {
+    font: var(--text-preset-1-mobile);
+  }
+
+  #explore-btn {
+    width: 9rem;
+    height: 9rem;
+    font: var(--text-preset-4-mobile);
+  }
+}
+
+@media (max-width: 81rem) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

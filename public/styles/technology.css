@@ -1,0 +1,97 @@
+main {
+  margin-right: 0;
+}
+
+#bg-image {
+  background-image: url("/assets/technology/background-technology-desktop.jpg");
+}
+
+.item-details-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-800);
+  flex-direction: row;
+}
+
+.item-details-container ol {
+  flex-direction: column;
+}
+
+.item-details-container ol li {
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: grid;
+  place-items: center;
+  color: var(--color-blue-900);
+  font: var(--text-preset-4);
+  transition: all 0.2s;
+}
+
+.item-details-container ol :not(li.selected) {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.item-details-container ol li:hover {
+  border-color: var(--color-white);
+}
+
+.item-image {
+  margin-inline-start: var(--spacing-400);
+}
+
+@media (max-width: 81rem) {
+  main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .page-step-title {
+    margin-left: min(10vw, 10rem);
+  }
+
+  .main-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+
+  .item-details-container {
+    flex-direction: column;
+    margin: var(--spacing-400);
+    gap: var(--spacing-500);
+  }
+  .item-details-container ol {
+    flex-direction: row;
+  }
+
+  .item-details {
+    height: auto;
+  }
+
+  .item-image-container {
+    margin-inline-start: 0;
+    width: 100%;
+    height: 22rem;
+  }
+
+  .item-image {
+    margin-inline-start: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 30rem) {
+  .page-step-title {
+    margin-left: 0;
+    margin-bottom: var(--spacing-1000);
+  }
+
+  .item-details-container ol li {
+    font: var(--text-preset-4-mobile);
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,139 @@
+main {
+  margin: var(--spacing-200) min(10vw, 10rem);
+  padding-bottom: var(--spacing-600);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-step-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+
+.page-step-title * {
+  transition: font 0.5s;
+}
+
+.page-step-title .step-count {
+  font: bold 1.75rem var(--font-family-barlow-condensed);
+  color: var(--color-white);
+  opacity: 0.25;
+}
+
+.page-step-title .step-description {
+  font: var(--text-preset-5);
+  letter-spacing: var(--text-preset-5-letter-spacing);
+  text-transform: uppercase;
+}
+
+.item-details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details-container ol {
+  list-style-type: none;
+  display: flex;
+  gap: var(--spacing-600);
+  padding: 0;
+  margin: 0;
+}
+
+.item-details-container ol li {
+  background-color: rgb(255, 255, 255, 0.1744);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.item-details-container ol li:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.item-details-container ol li.selected {
+  background-color: white;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 30rem;
+  flex-grow: 1;
+}
+
+.item-details * {
+  transition: font 0.2s;
+}
+
+.item-details h2 {
+  font: var(--text-preset-4);
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: var(--color-white);
+  opacity: 0.5;
+}
+
+.item-details h3 {
+  font: var(--text-preset-3);
+  margin: var(--spacing-300) 0 0 0;
+  text-transform: uppercase;
+}
+
+.item-details p {
+  font: var(--text-preset-9);
+  color: var(--color-blue-300);
+  margin-bottom: var(--spacing-600);
+}
+
+.item-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  width: 35%;
+  object-fit: contain;
+}
+
+.item-image {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 60rem) {
+  .item-image-container {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .page-step-title {
+    justify-content: center;
+  }
+
+  .page-step-title .step-count {
+    font-size: 1rem;
+  }
+
+  .page-step-title .step-description {
+    font: var(--text-preset-6-mobile);
+  }
+
+  .item-details h2 {
+    font: var(--text-preset-4-mobile);
+  }
+
+  .item-details h3 {
+    font: var(--text-preset-3-mobile);
+  }
+
+  .item-details p {
+    font: var(--text-preset-9-mobile);
+  }
+}
