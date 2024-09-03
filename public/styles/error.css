@@ -1,0 +1,9 @@
+main {
+  text-align: center;
+  text-transform: uppercase;
+  font: var(--text-preset-6-mobile);
+}
+
+#bg-image {
+  background-image: url("/assets/home-page/background-home-desktop.jpg");
+}

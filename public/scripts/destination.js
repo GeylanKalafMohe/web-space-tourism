@@ -11,16 +11,19 @@ const destinationDescriptionElement =
 const destinationDistanceElement = document.getElementById("avg-distance");
 const destinationTravelTimeElement = document.getElementById("travel-time");
 
-getSpaceData().then((spaceDataArray) => {
-  addPaginationClickListeners(destinationButtonElements, () => {
-    let destinations = spaceDataArray.destinations;
+getSpaceData()
+  .then((spaceDataArray) => {
+    addPaginationClickListeners(destinationButtonElements, () => {
+      let destinations = spaceDataArray.destinations;
 
-    const currentDestination = destinations[selectedIndex];
+      const currentDestination = destinations[selectedIndex];
 
-    destinationImgElement.src = currentDestination.images.webp;
-    destinationTitleElement.textContent = currentDestination.name;
-    destinationDescriptionElement.textContent = currentDestination.description;
-    destinationDistanceElement.textContent = currentDestination.distance;
-    destinationTravelTimeElement.textContent = currentDestination.travel;
-  });
-});
+      destinationImgElement.src = currentDestination.images.webp;
+      destinationTitleElement.textContent = currentDestination.name;
+      destinationDescriptionElement.textContent =
+        currentDestination.description;
+      destinationDistanceElement.textContent = currentDestination.distance;
+      destinationTravelTimeElement.textContent = currentDestination.travel;
+    });
+  })
+  .catch((_) => {});

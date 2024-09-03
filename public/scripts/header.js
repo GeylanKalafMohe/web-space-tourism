@@ -20,8 +20,11 @@ const selectedNavTabIndex = mainHeaderElement.dataset.tabindex;
 
 function changeSelectedTab(index) {
   navListElement.forEach((navItem) => {
-    console.log(navItem.children[index]);
-    navItem.children[index].firstElementChild.classList.toggle("selected");
+    try {
+      navItem.children[index].firstElementChild.classList.toggle("selected");
+    } catch (error) {
+      console.log(error);
+    }
   });
 }
 

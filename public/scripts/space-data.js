@@ -2,11 +2,17 @@ async function getSpaceData() {
   try {
     const response = await fetch("/space-data");
 
-    const destinationArray = await response.json();
+    const responseJSON = await response.json();
 
-    return destinationArray.data;
+    const responseError = responseJSON.error;
+    if (responseError != null) {
+      throw responseError;
+    }
+
+    return responseJSON.data;
   } catch (error) {
     console.log(error);
     alert("Unknown error occurred: " + error);
+    throw error;
   }
 }
